@@ -1,0 +1,44 @@
+.Header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color:rgb(56,56,56);
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    height: 50px;
+    column-gap: 38px;
+    z-index:1000;
+}
+.Header-Search{
+    background-color:rgb(80,80,80);
+    border-style:solid;
+    font-size:16px;
+    border-color:rgb(80,80,80);
+    padding:5px;
+    border-radius:50px;
+    padding-left:10px;
+}
+.Header-Search:focus{
+    outline:none;
+    border-color:rgb(80,80,80);
+    color:rgb(169,169,169);
+}
+.Header-Part{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
+    color:rgb(169,169,169);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width:95px;
+    transition: all ease 0.3s;
+}
+.Header-Part:hover{
+    cursor:pointer;
+    background-color: rgb(190,190,190);
+    color:rgb(105,105,105);
+}

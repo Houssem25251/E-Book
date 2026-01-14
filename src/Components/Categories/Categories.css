@@ -1,0 +1,74 @@
+.CatPicture{
+    width:250px;
+}
+.CatText{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+    position: absolute;
+    color:white;
+    width:250px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    height: 35px;
+    padding-top:3.5px;
+}
+.CategoryDiv{
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:250px;
+}
+.MainCat{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    height: 500px;
+    transition: all 0.5s ease;
+}
+.MainCat.show{
+    height: 865px;
+}
+.CatTitle{
+    color:rgb(169,169,169);
+    font-size:50px;
+    text-align: center;
+}
+.CategoriesContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ButtonCat{
+    margin-top:40px;
+    width:120px;
+    height: 35px;
+    border-style:solid;
+    border-radius: 20px;
+    background-color:rgb(72,72,72);
+    color:white;
+    border-color:white ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:15px;
+    transition: all 0.3s ease;
+}
+.ButtonCat:hover{
+    background-color: white;
+    color:rgb(72,72,72);
+    cursor:pointer;
+}
+.cat{
+    transition: all 1s ease;
+    opacity:0;
+}
+.cat:hover{
+    cursor:pointer;
+}
+.cat.show{
+    opacity:1;
+}
+.cat1:hover{
+    cursor:pointer;
+}
