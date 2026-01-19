@@ -1,0 +1,33 @@
+.About-Text{
+    font-size:25px;
+    color:white;
+    font-weight: bold;
+    width:100%;
+    background-color:rgba(0,0,0,0.4);
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+.About-Container{
+    display:flex;
+    flex-direction: column;
+}
+
+.About-Text-Sub{
+    font-size:22px;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-left:10px;
+}
+.githublinkedin-link{
+    color:white;
+    text-decoration: none;
+}
+.githublinkedin-link:hover{
+    text-decoration: underline;
+}
+

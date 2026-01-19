@@ -1,20 +1,16 @@
 import './Library.css';
-import Book1 from '../../assets/Book.png';
-import {Book,BookCard} from '../BookPage.jsx';
+import { BookCardSaved } from '../BookPage.jsx';
 
-
-const b1=new Book("broken",Book1,"Broken","/Books/Book.pdf");
-export const books=[];
-books.push(b1);
-
-function SavedBooks(){
+function SavedBooks({setbooksfav,books,booksfav}){
     return(
-        <div className="SavedBooks-Container">
+        <div id="Library" className="SavedBooks-Container">
             <p className="SavedBooks-Text">Saved Books</p>
             <div className="Books-Container">
                 {books.map((c)=>{
                     return(
-                        <BookCard s={c}/>
+                        <>
+                            <BookCardSaved key={c.id} setbooksfav={setbooksfav} booksfav={booksfav} s={c}/>
+                        </>
                     )
                 })}
             </div>    
@@ -22,11 +18,11 @@ function SavedBooks(){
     )
 }
 
-export function Library(){
+export function Library({setbooksfav,books,booksfav}){
     return(
         <>
             <p className="Library-Text">My Library</p>
-            <SavedBooks />
+            <SavedBooks booksfav={booksfav} setbooksfav={setbooksfav} books={books} />
         </>
     )
 }

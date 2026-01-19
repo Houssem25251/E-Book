@@ -36,6 +36,7 @@
     text-align: center;
     width:95px;
     transition: all ease 0.3s;
+    text-decoration: none;
 }
 .Header-Part:hover{
     cursor:pointer;
