@@ -1,7 +1,5 @@
-import { BookCardFavorite } from '../BookPage.jsx';
+import { BookCard } from '../BookCard/BookCard.jsx';
 import './Favorites.css';
-
-
 
 export function Favorites({setbooksfav,booksfav}){
     return(
@@ -11,7 +9,7 @@ export function Favorites({setbooksfav,booksfav}){
                         {booksfav.map((c)=>{
                             return(
                                 <>
-                                    <BookCardFavorite key={c.id} setbooksfav={setbooksfav} booksfav={booksfav} s={c}/>
+                                    <BookCard key={c.id} setbooksfav={setbooksfav} booksfav={booksfav} s={c}/>
                                 </>    
                             )
                         })}

@@ -1,9 +1,10 @@
 import './App.css'
-import {Header} from './Components/Header.jsx';
-import {MainPage} from './Components/MainPage.jsx';
+import {Header} from './Components/Header/Header.jsx';
+import {MainPage} from './Components/MainPage/MainPage.jsx';
 import {BrowserRouter} from 'react-router';
 import {Routes,Route} from 'react-router';
 import Book1 from './assets/Book.png';
+import senseandsensibility from './assets/senseandsensibility.jpeg';
 import R from './assets/Romance.png';
 import E from './assets/Economics.png';
 import F from './assets/Fantasy.jpg';
@@ -19,27 +20,31 @@ import HI from './assets/History.jpg';
 import PO from './assets/Poetry.jpg';
 import PH from './assets/Philosophy.jpg';
 import FS from './assets/Fitness&Sports.png';
-import {BookPage} from './Components/BookPage.jsx';
-import {Book} from './Components/BookPage.jsx';
+import {BookPage} from './Components/BookPage/BookPage.jsx';
+import {Book} from './Components/BookPage/BookPage.jsx';
 import {useState} from 'react';
-import {CategoryPage} from './Components/CategoryPage.jsx';
+import {CategoryPage} from './Components/CategoryPage/CategoryPage.jsx';
 import {CategoryPart} from './Components/Categories/Categories.jsx';
+import {FilteredBooks} from './Components/FilteredBooks/FilteredBooks.jsx';
 
 
-function MainPageApp({CategoriesArray,setbooksfav,books,booksfav}){
+
+function MainPageApp({Search,setSearch,CategoriesArray,setbooksfav,books,booksfav}){
   return(
     <div className="AppDiv">
-        <Header />
+        <Header Search={Search} setSearch={setSearch} />
         <MainPage CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />
     </div>
   )
 }
 
 function App(){
-  //Books data
+  //Books & favorite books data
   const b1=new Book("broken",Book1,"Broken: Tales of Ruin and Restoration is a collection of short stories about loss, brokenness, and the slow journey toward healing and hope.","Broken: Tales of Ruin and Restoration","/Books/Book.pdf",3.5,"Faith Ijiga","Romance");
-  const[books,setbooks]=useState([b1]);
+  const b2=new Book("senseandsensibility",senseandsensibility,"Sense and Sensibility is a romantic novel by Jane Austen, published in 1811.","Sense and Sensibility","/Books/senseandsensibility.pdf",4.0,"Jane Austen","Romance");
+  const[books,setbooks]=useState([b1,b2]);
   const[booksfav,setbooksfav]=useState([]);
+
   //Categories data
   const cat1=new CategoryPart("Romance",R,1);
   const cat2=new CategoryPart("Fantasy",F,2);
@@ -58,12 +63,17 @@ function App(){
   const cat15=new CategoryPart("Fitness & Sports",FS,15);
   const[CategoriesArray,setCategory]=useState([cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,cat13,cat14,cat15]);
   
+  //Input data (in header)
+  const[Search,setSearch]=useState("");
+
+  // <Route path="/filteredbooks" element={<FilteredBooks FilteredBooksSearch={FilteredBooksSearch} booksfav={booksfav} setbooksfav={setbooksfav} />}/>
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPageApp CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
-        <Route path="/book/:id" element ={<BookPage setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
-        <Route path="/category/:id" element={<CategoryPage CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books}  />}/>
+        <Route path="/" element={<MainPageApp Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
+        <Route path="/book/:id" element ={<BookPage Search={Search} setSearch={setSearch} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
+        <Route path="/category/:id" element={<CategoryPage Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books}  />}/>
+        <Route path="/filteredbooks" element={<FilteredBooks Search={Search} setSearch={setSearch} books={books} booksfav={booksfav} setbooksfav={setbooksfav} />}/>
       </Routes>
     </BrowserRouter>
   

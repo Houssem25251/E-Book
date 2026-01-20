@@ -1,4 +1,3 @@
-
 import './Categories.css';
 import {Link} from 'react-router';
 import {useState} from 'react';
@@ -24,8 +23,6 @@ function Category({i,t,id}){
         </Link>    
     )
 }
-
-
 
 export function Categories({CategoriesArray}){
     const HiddenIds=[10,11,12,13,14,15];

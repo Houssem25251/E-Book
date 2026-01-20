@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 export function Home(){
     const [state,setState] = useState(0);
-
     return(
         <div id="Home" className="HomeDiv">
             <div className="Main">

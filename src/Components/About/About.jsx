@@ -1,6 +1,5 @@
 import './About.css';
 
-
 export function About(){
     return(
         <div id="About" className="About-Container">

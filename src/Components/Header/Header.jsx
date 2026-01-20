@@ -1,11 +1,8 @@
 import './Header.css';
-import {Link} from 'react-scroll';
-import {Categories} from '../Components/Categories/Categories.jsx';
-import {Home} from '../Components/Home/Home.jsx';
 import {useLocation,useNavigate} from 'react-router';
 import {scroller} from 'react-scroll';
 
-export function Header(){
+export function Header({Search,setSearch}){
     const l=useLocation();
     const n=useNavigate();
     function Click(PagePart){
@@ -27,6 +24,7 @@ export function Header(){
 
         }
     }
+    
     return(
         <div className="Header">
                 <div className="Header-Part" onClick={() => Click("Home")}>Home</div>
@@ -34,7 +32,7 @@ export function Header(){
                 <div className="Header-Part" onClick={() =>Click("Library")}>Library</div>
                 <div className="Header-Part" onClick={() =>Click("Favorites")}>Favorites</div>
                 <div className="Header-Part" onClick={() =>Click("About")}>About</div>
-                <input type="text" placeholder="Search books,authors" className="Header-Search"/>
+                <input type="text" placeholder="Search books,authors" className="Header-Search" value={Search} onChange={(e)=>{setSearch(e.target.value)}} onKeyDown={(e) => {if (e.key === "Enter") n("/filteredbooks");}} />
         </div>
     )
     

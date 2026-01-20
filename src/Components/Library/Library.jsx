@@ -1,5 +1,5 @@
 import './Library.css';
-import { BookCardSaved } from '../BookPage.jsx';
+import { BookCard } from '../BookCard/BookCard.jsx';
 
 function SavedBooks({setbooksfav,books,booksfav}){
     return(
@@ -9,7 +9,7 @@ function SavedBooks({setbooksfav,books,booksfav}){
                 {books.map((c)=>{
                     return(
                         <>
-                            <BookCardSaved key={c.id} setbooksfav={setbooksfav} booksfav={booksfav} s={c}/>
+                            <BookCard key={c.id} setbooksfav={setbooksfav} booksfav={booksfav} s={c}/>
                         </>
                     )
                 })}

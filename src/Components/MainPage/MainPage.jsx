@@ -1,12 +1,12 @@
 import './MainPage.css';
-import {Home} from './Home/Home.jsx';
-import {Categories} from './Categories/Categories.jsx';
-import {Library} from './Library/Library.jsx';
-import {Favorites} from './Favorites/Favorites.jsx';
+import {Home} from '../Home/Home.jsx';
+import {Categories} from '../Categories/Categories.jsx';
+import {Library} from '../Library/Library.jsx';
+import {Favorites} from '../Favorites/Favorites.jsx';
 import {useLocation} from 'react-router';
 import {useEffect} from 'react';
 import {scroller} from 'react-scroll';
-import {About} from './About/About.jsx';
+import {About} from '../About/About.jsx';
 
 
 
