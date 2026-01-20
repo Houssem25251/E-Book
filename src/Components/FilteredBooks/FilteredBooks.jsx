@@ -4,7 +4,18 @@ import {BookCard} from '../BookCard/BookCard.jsx';
 
 export function FilteredBooks({Search,setSearch,books,booksfav,setbooksfav}){
     const FilteredBooksSearch=books.filter(b=>b.title.toLowerCase().includes(Search.toLowerCase()));
-    return(
+    if(FilteredBooksSearch.length===0){
+        return(
+        <div className="MainFilteredBooksPage">
+            <Header Search={Search} setSearch={setSearch}/>
+            <div className="FilteredBooksPage">
+                    <p className="NoBooksFound">Oops! no books found.</p>
+            </div>
+        </div>
+    )
+    }
+    else{
+        return(
         <div className="MainFilteredBooksPage">
             <Header Search={Search} setSearch={setSearch}/>
             <div className="FilteredBooksPage">
@@ -17,5 +28,6 @@ export function FilteredBooks({Search,setSearch,books,booksfav,setbooksfav}){
                 </div>
             </div>
         </div>
-    )
+    )   
+    }
 }
