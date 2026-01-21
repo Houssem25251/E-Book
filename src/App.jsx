@@ -29,11 +29,11 @@ import {FilteredBooks} from './Components/FilteredBooks/FilteredBooks.jsx';
 
 
 
-function MainPageApp({Search,setSearch,CategoriesArray,setbooksfav,books,booksfav}){
+function MainPageApp({Search,setSearch,CategoriesArray,setbooksfav,books,booksfav,bookssaved,setbookssaved}){
   return(
     <div className="AppDiv">
         <Header Search={Search} setSearch={setSearch} />
-        <MainPage CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />
+        <MainPage CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} bookssaved={bookssaved} setbookssaved={setbookssaved} />
     </div>
   )
 }
@@ -44,6 +44,7 @@ function App(){
   const b2=new Book("senseandsensibility",senseandsensibility,"Sense and Sensibility is a romantic novel by Jane Austen, published in 1811.","Sense and Sensibility","/Books/senseandsensibility.pdf",4.0,"Jane Austen","Romance");
   const[books,setbooks]=useState([b1,b2]);
   const[booksfav,setbooksfav]=useState([]);
+  const[bookssaved,setbookssaved]=useState([]);
 
   //Categories data
   const cat1=new CategoryPart("Romance",R,1);
@@ -70,10 +71,10 @@ function App(){
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPageApp Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
+        <Route path="/" element={<MainPageApp Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} bookssaved={bookssaved} setbookssaved={setbookssaved}/>}/>
         <Route path="/book/:id" element ={<BookPage Search={Search} setSearch={setSearch} setbooksfav={setbooksfav} booksfav={booksfav} books={books} />}/>
-        <Route path="/category/:id" element={<CategoryPage Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books}  />}/>
-        <Route path="/filteredbooks" element={<FilteredBooks Search={Search} setSearch={setSearch} books={books} booksfav={booksfav} setbooksfav={setbooksfav} />}/>
+        <Route path="/category/:id" element={<CategoryPage Search={Search} setSearch={setSearch} CategoriesArray={CategoriesArray} setbooksfav={setbooksfav} booksfav={booksfav} books={books} bookssaved={bookssaved} setbookssaved={setbookssaved}/>}/>
+        <Route path="/filteredbooks" element={<FilteredBooks Search={Search} setSearch={setSearch} books={books} booksfav={booksfav} setbooksfav={setbooksfav} bookssaved={bookssaved} setbookssaved={setbookssaved}/>}/>
       </Routes>
     </BrowserRouter>
   

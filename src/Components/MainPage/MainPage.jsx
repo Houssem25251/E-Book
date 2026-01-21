@@ -10,7 +10,7 @@ import {About} from '../About/About.jsx';
 
 
 
-export function MainPage({CategoriesArray,setbooksfav,books,booksfav}){
+export function MainPage({CategoriesArray,setbooksfav,books,booksfav,bookssaved,setbookssaved}){
     const l=useLocation();
     useEffect(()=>{
         scroller.scrollTo(l.state,{
@@ -23,8 +23,8 @@ export function MainPage({CategoriesArray,setbooksfav,books,booksfav}){
         <div className="MainPage">
             <Home />
             <Categories CategoriesArray={CategoriesArray} />
-            <Library setbooksfav={setbooksfav} books={books} booksfav={booksfav} />
-            <Favorites setbooksfav={setbooksfav} booksfav={booksfav} />
+            <Library setbooksfav={setbooksfav} books={books} booksfav={booksfav} bookssaved={bookssaved} setbookssaved={setbookssaved} />
+            <Favorites setbooksfav={setbooksfav} booksfav={booksfav} bookssaved={bookssaved} setbookssaved={setbookssaved}/>
             <About />
         </div>
     )

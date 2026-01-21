@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
     row-gap:8px;
-    margin-top:-30px;
+    margin-top:30px;
 }
 
 .Book-Download{
@@ -49,6 +49,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     column-gap: 40px;
     row-gap: 40px;
+    margin-bottom:30px;
+    min-height: 250px;
 }
 
 .SavedBooks-Text{
