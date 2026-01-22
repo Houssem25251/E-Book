@@ -7,6 +7,25 @@
     transition: all 0.4s ease;
 }
 
+.bookcard-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:15px;
+    position: absolute;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    text-align: center;
+    width:179px;
+    background-color: rgba(0,0,0,0.4);
+    height: 35px;
+    padding-top:3.5px;
+    bottom:85px;
+    right:-4px;
+    padding-bottom:3px;
+}
+
 .BookCard-Image{
     width:170px;
     height: 250px;

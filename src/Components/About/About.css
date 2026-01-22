@@ -30,4 +30,20 @@
 .githublinkedin-link:hover{
     text-decoration: underline;
 }
+.PUBLICDOMAIN{
+    text-align: center;
+    text-underline-offset: 5px;
+}
+.IMPORTANT{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.gutenberg{
+    color: white;
+    text-decoration: none;
+}
+.gutenberg:hover{
+    text-decoration: underline;
+}
 

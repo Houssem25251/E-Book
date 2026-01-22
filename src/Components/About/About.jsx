@@ -14,6 +14,10 @@ export function About(){
                 <br/>Github: <a className="githublinkedin-link" href="https://github.com/Houssem25251">https://github.com/Houssem25251</a>
                 <br/>Linkedin: <a className="githublinkedin-link" href="https://www.linkedin.com/in/houssem-zaier-7a175b337/">https://www.linkedin.com/in/houssem-zaier-7a175b337/</a>
                 <br/>Main portfolio website: <a className="githublinkedin-link" href="https://houssemeddinezaier.netlify.app">https://houssemeddinezaier.netlify.app</a>
+                <br/>
+                <p className="IMPORTANT"><br/>IMPORTANT:</p>
+                <p className="PUBLICDOMAIN">EVERY BOOK USED IN THIS WEBSITE IS PUBLIC DOMAIN DOWNLOADED <br/>FROM <a target="_blank" className="gutenberg" href="https://www.gutenberg.org">PROJECT GUTENBERG</a></p>
+                <p className="PUBLICDOMAIN">EVERY IMAGE USED IN THIS WEBSITE IS AI-GENERATED.</p>
             </p>
             
         </div>

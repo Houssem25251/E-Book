@@ -14,7 +14,7 @@ export function Home(){
                     <div className="Main2">
                         <p className="Welcome">Welcome to Houssem's Library</p>
                         <p className="Welcome-D">
-                            Browse thousands of books, discover new genres, and enjoy a clean reading experience.
+                            Browse hundreds of books, discover new genres, and enjoy a clean reading experience.
                         </p>
                     </div>
 

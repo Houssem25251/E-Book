@@ -35,6 +35,7 @@ export function BookCard({s,booksfav,setbooksfav,bookssaved,setbookssaved}){
         <div className="BookCard">
             <Link className="Link-To-Book" to={`/book/${s.id}`}>
                 <img className="BookCard-Image" src={s.image}/>
+                <p className="bookcard-title">{s.title}</p>
             </Link>
             {!booksfav.some((book)=>{return(book.id===s.id)}) && <button onClick={()=>{addfav(setbooksfav)}} onMouseLeave={()=>{mouseOut(setFs)}} onMouseEnter={()=>{mouseEnter(setFs)}} className="BookCard-Button-Favorite">
                         <img title="Add to favorites!" className="BookCardFavorite" src={fs?FILLEDSTAR:UNFILLEDSTAR}/>
