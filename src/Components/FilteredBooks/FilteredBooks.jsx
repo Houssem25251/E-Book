@@ -3,7 +3,13 @@ import './FilteredBooks.css';
 import {BookCard} from '../BookCard/BookCard.jsx';
 
 export function FilteredBooks({Search,setSearch,books,booksfav,setbooksfav,bookssaved,setbookssaved}){
-    const FilteredBooksSearch=books.filter(b=>b.title.toLowerCase().includes(Search.toLowerCase()) || b.author.toLowerCase().includes(Search.toLowerCase()));
+    const FilteredBooksSearch = [...new Map(
+        books
+    .filter(b => b.title.toLowerCase().includes(Search.toLowerCase()) || 
+                 b.author.toLowerCase().includes(Search.toLowerCase()))
+    .map(b => [b.title, b])
+    ).values()];
+
     if(FilteredBooksSearch.length===0){
         return(
         <div className="MainFilteredBooksPage">
