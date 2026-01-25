@@ -57,6 +57,35 @@ import passagesfromthelifeofaphilosopher from '../assets/passagesfromthelifeofap
 import aninvestigationofthelawsofthought from '../assets/aninvestigationofthelawsofthought.jfif';
 import thegameoflogic from '../assets/thegameoflogic.jfif';
 
+//Science covers
+import ontheoriginofspecies from '../assets/ontheoriginofspecies.jfif';
+import relativitythespecialandthegeneraltheory from '../assets/relativitythespecialandthegeneraltheory.jfif';
+import thevariationofanimalsandplantsunderdomestication from '../assets/thevariationofanimalsandplantsunderdomestication.jfif';
+
+//Thriller covers
+import thedogofthebaskervilles from '../assets/thedogofthebaskervilles.jfif';
+import thesecretadversary from '../assets/thesecretadversary.jfif';
+import themaninthecorner from '../assets/themaninthecorner.jfif';
+import thewomaninwhite from '../assets/thewomaninwhite.jfif';
+import themoonstone from '../assets/themoonstone.jfif';
+import thethirtyninersteps from '../assets/thethirtyninersteps.jfif';
+
+//Technology
+import thesteamengineanditsinventors from '../assets/thesteamengineanditsinventors.jfif';
+
+//History
+import thehistoryofengland from '../assets/thehistoryofengland.jfif';
+import thehistoryofrome from '../assets/thehistoryofrome.jfif';
+
+//Poetry
+import theravenandotherpoems from '../assets/theravenandotherpoems.jfif';
+import lyricalballads from '../assets/lyricalballads.jfif';
+
+//Fitness & Sports covers
+import walkersmanlyexercises from '../assets/walkersmanlyexercises.jpg';
+import strengthandhowtoobtainit from '../assets/strengthandhowtoobtainit.jpg';
+import practicaltrainingforathleticfeats from '../assets/practicaltrainingforathleticfeats.jpg';
+
 
 //Romance
 const b1=new Book("prideandprejudice",prideandprejudice,"A classic romance about Elizabeth Bennet and Mr. Darcy navigating love and social expectations.","Pride and Prejudice","/Books/prideandprejudice.pdf",3.5,"Jane Austen","Romance");
@@ -116,16 +145,7 @@ const b42 = new Book("thebasicfactsofeconomics", thebasicfactsofeconomics, "A cl
 const b43 = new Book("economicshistoryclassic", economicshistoryclassic, "An exploration of classical economic thought and foundational theories from early influential economists.", "Classical Economics and Modern Theory", "/Books/classicaleconomicsandmoderntheory.pdf", 3.0, "Public Domain / Various Authors", "Economics");
 
 //Computer Science
-const b44 = new Book(
-  "sketchoftheanalyticalengine", 
-  sketchoftheanalyticalengine, 
-  "An early and influential description of Charles Babbage’s design for the Analytical Engine with commentary by Ada Lovelace, outlining the conceptual foundation of programmable machines.", 
-  "Sketch of the Analytical Engine Invented by Charles Babbage", 
-  "/Books/sketchoftheanalyticalengine.pdf", 
-  4.5, 
-  "Luigi Federico Menabrea / Ada Lovelace (translator)", 
-  "Computer Science"
-);
+const b44 = new Book("sketchoftheanalyticalengine",sketchoftheanalyticalengine, "An early and influential description of Charles Babbage’s design for the Analytical Engine with commentary by Ada Lovelace, outlining the conceptual foundation of programmable machines.", "Sketch of the Analytical Engine Invented by Charles Babbage", "/Books/sketchoftheanalyticalengine.pdf", 4.5, "Luigi Federico Menabrea / Ada Lovelace (translator)", "Computer Science");
 
 const b45 = new Book(
   "passagesfromthelifeofaphilosopher", 
@@ -160,5 +180,35 @@ const b47 = new Book(
   "Computer Science"
 );
 
+//Science books
+const b48=new Book("ontheoriginofspecies",ontheoriginofspecies,"Charles Darwin explains the theory of evolution by natural selection, transforming how humans understand life and biological diversity.","On the Origin of Species","/Books/ontheoriginofspecies.pdf",5.0,"Charles Darwin","Science");
+const b49=new Book("relativitythespecialandthegeneraltheory",relativitythespecialandthegeneraltheory,"Albert Einstein presents his revolutionary ideas on space, time, gravity, and the structure of the universe in an accessible way.","Relativity: The Special and the General Theory","/Books/relativitythespecialandthegeneraltheory.pdf",4.5,"Albert Einstein","Science");
+const b50=new Book("thevariationofanimalsandplantsunderdomestication",thevariationofanimalsandplantsunderdomestication,"Charles Darwin examines how domestication affects variation in animals and plants, reinforcing the foundations of evolutionary biology.","The Variation of Animals and Plants under Domestication","/Books/thevariationofanimalsandplantsunderdomestication.pdf",4.5,"Charles Darwin","Science");
 
-export const books=[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b40,b39,b38,b41,b42,b43,b44,b45,b46,b47];
+//Thriller
+const b51=new Book("thedogofthebaskervilles",thedogofthebaskervilles,"Sherlock Holmes investigates a terrifying legend of a supernatural hound haunting a noble family on the English moors.","The Dog of the Baskervilles","/Books/thedogofthebaskervilles.pdf",4.5,"Arthur Conan Doyle","Thriller");
+const b52=new Book("thesecretadversary",thesecretadversary,"Two young adventurers uncover a dangerous post-war conspiracy involving espionage, hidden identities, and a shadowy enemy.","The Secret Adversary","/Books/thesecretadversary.pdf",4.0,"Agatha Christie","Thriller");
+const b53=new Book("themaninthecorner",themaninthecorner,"An eccentric genius solves complex crimes using pure logic, often humiliating professional detectives.","The Man in the Corner","/Books/themaninthecorner.pdf",3.5,"Baroness Orczy","Thriller");
+const b54=new Book("thewomaninwhite",thewomaninwhite,"A gripping mystery of deception, madness, and stolen identity centered around a mysterious woman dressed in white.","The Woman in White","/Books/thewomaninwhite.pdf",4.5,"Wilkie Collins","Thriller");
+const b55=new Book("themoonstone",themoonstone,"The theft of a priceless diamond leads to suspicion, psychological tension, and one of the earliest detective thrillers ever written.","The Moonstone","/Books/themoonstone.pdf",4.0,"Wilkie Collins","Thriller");
+const b56=new Book("thethirtyninersteps",thethirtyninersteps,"An ordinary man is thrust into a deadly chase across Britain while uncovering an international spy plot.","The Thirty-Nine Steps","/Books/thethirtyninersteps.pdf",4.0,"John Buchan","Thriller");
+
+//Technology
+const b57=new Book("passagesfromthelifeofaphilosopher",passagesfromthelifeofaphilosopher,"Charles Babbage’s autobiographical account detailing his inventions, calculating engines, and views on science and technology.","Passages from the Life of a Philosopher","/Books/passagesfromthelifeofaphilosopher.pdf",4.0,"Charles Babbage","Technology");
+const b58=new Book("thesteamengineanditsinventors",thesteamengineanditsinventors,"A historical account of the development of the steam engine and the inventors who shaped early industrial technology.","The Steam Engine and Its Inventors","/Books/thesteamengineanditsinventors.pdf",3.5,"Samuel Smiles","Technology");
+
+//History
+const b59=new Book("thehistoryofengland",thehistoryofengland,"A detailed narrative of England’s history from the earliest times to the reign of Henry VIII.","The History of England","/Books/thehistoryofengland.pdf",4.5,"David Hume","History");
+const b60=new Book("thehistoryofrome",thehistoryofrome,"A comprehensive account of the rise and fall of the Roman Empire and its influence on Western civilization.","The History of Rome","/Books/thehistoryofrome.pdf",4.0,"Titus Livius (Livy)","History");
+
+//Poetry
+const b61=new Book("theravenandotherpoems",theravenandotherpoems,"A collection of Edgar Allan Poe’s haunting and lyrical poems, including the famous 'The Raven'.","The Raven and Other Poems","/Books/theravenandotherpoems.pdf",4.5,"Edgar Allan Poe","Poetry");
+const b62=new Book("lyricalballads",lyricalballads,"A landmark collection of Romantic poetry by Wordsworth and Coleridge, exploring nature, imagination, and human emotion.","Lyrical Ballads","/Books/lyricalballads.pdf",4.0,"William Wordsworth / Samuel Taylor Coleridge","Poetry");
+
+//Fitness & Sports
+const b63=new Book("walkersmanlyexercises",walkersmanlyexercises,"A comprehensive 19th‑century guide to physical fitness and outdoor exercise for strength, agility and overall health.","Walker’s Manly Exercises","/Books/walkersmanlyexercises.pdf",4.0,"Donald Walker","Fitness & Sports");
+const b64=new Book("strengthandhowtoobtainit",strengthandhowtoobtainit,"A classic guide to physical culture and strength training, teaching methods for developing strength and overall well‑being.","Strength and How to Obtain It","/Books/strengthandhowtoobtainit.pdf",4.5,"Eugen Sandow","Fitness & Sports");
+const b65=new Book("practicaltrainingforathleticfeats",practicaltrainingforathleticfeats,"A detailed training manual covering running, walking, rowing, boxing, wrestling and more athletic feats with tips on exercise and diet.","Practical Training for Running, Walking, Rowing, Wrestling, Boxing, Jumping, and All Kinds of Athletic Feats","/Books/practicaltrainingforathleticfeats.pdf",4.0,"Ed. James","Fitness & Sports");
+
+
+export const books=[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b40,b39,b38,b41,b42,b43,b44,b45,b46,b47,b48,b49,b50,b51,b52,b53,b54,b55,b56,b57,b58,b59,b60,b61,b62,b63,b64,b65];
