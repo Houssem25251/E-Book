@@ -1,7 +1,7 @@
 import {Book} from '../Components/BookPage/BookPage';
 //Romance Covers
 import prideandprejudice from '../assets/prideandprejudice.jfif';
-import emma from '../assets/emma.png';
+import emma from '../assets/emma.PNG';
 import senseandsensibility from '../assets/senseandsensibility.jpeg';
 import northangerabbey from '../assets/northangerabbey.png';
 import persuasion from '../assets/persuasion.png';
